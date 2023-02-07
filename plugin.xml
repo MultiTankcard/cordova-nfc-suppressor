@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="cordova-plugin-nfcsuppressor"
+      version="0.1.0">
+
+    <name>NFCSuppressor</name>
+	<author>Laurens Bossen</author>
+    <description>Cordova NFC tag discovery suppression Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,nfc,googlepay</keywords>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+    <js-module src="www/nfcsuppressor.js" name="nfcsuppressor">
+        <clobbers target="nfcsuppressor" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="NFCSuppressor">
+                <param name="android-package" value="nl.mtc.plugin.NFCSuppressor"/>
+				<param name="onload" value="true" />
+            </feature>
+        </config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.NFC"/>
+		</config-file>
+
+        <source-file src="src/android/NFCSuppressor.java" target-dir="src/nl/mtc/plugin/nfcsuppressor" />
+
+    </platform>
+</plugin>
