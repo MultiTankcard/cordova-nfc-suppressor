@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-nfcsuppressor",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "A cordova plugin that performs NFC suppression",
   "cordova": {
     "id": "cordova-plugin-nfcsuppressor",
@@ -18,7 +18,7 @@
   "author": "Laurens Bossen",
   "license": "Apache-2",
   "bugs": {
-    "url": "https://github.com/don/cordova-plugin-hello/issues"
+    "url": "https://github.com/MultiTankcard/cordova-nfc-suppressor/issues"
   },
-  "homepage": "https://github.com/don/cordova-plugin-hello#readme"
+  "homepage": "https://github.com/MultiTankcard/cordova-nfc-suppressor#readme"
 }
